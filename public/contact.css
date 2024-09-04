@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.title{
+    text-align: center;
+    margin: 50px;
+}
+
+.contacts{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: groove;
+    margin: 0px 400px;
+      padding: 20px;
+    flex-wrap: wrap;
+}
+
+#email{
+    padding: 0px 10px;
+}
+
+.nav-links{
+    text-align: center;
+    padding-top: 120px;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+}
+
+a{
+    font-size: larger;
+    color: black;
+    font-family:sans-serif;
+    padding: 5px;
+    font-weight: 200px;  
+}
+
+li:hover{
+   text-decoration: underline;
+   transition: 2s;
+   padding-bottom: 10px;
+}
+
+.bottom{
+    text-align: center;
+    padding-top: 40px;
+
+}
+.contact{
+  
+  margin: 80px;
+  
+}

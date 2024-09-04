@@ -1,0 +1,321 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url(Photos/tree.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+/* contents */
+.content{
+    display: flex;
+    justify-content: center;
+     position: static;
+     margin: 50px ;
+     flex-flow: row wrap;
+}
+
+span{
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 40px;
+    color: #fff;
+    
+    flex: 1 1;
+}
+
+.title{
+    font-size: 50px;
+    line-height: 70px;
+}
+
+i{
+    color: yellowgreen;
+}
+
+
+.btns{
+   position: relative;
+   top: 120px;
+}
+
+.cv{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+.info{
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    background-color:black;
+    color: snow;
+
+}
+.info:hover{
+    background-color: rgb(119, 136, 167);
+    color: black;
+    transition: 1s;
+}
+.cv:hover{
+    background-color: black;
+    color:rgb(168, 231, 23);
+    transition:1s;
+}
+
+.kid{
+   
+    width: 300px;
+    height: 350px;
+}
+
+/* navigation */
+
+.logo{
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: calc(100%);
+    color: #fff;
+
+}
+
+#greeting{
+    margin-top: 10px;
+    display: initial;
+    position: absolute;
+    top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: lightgray;
+    margin-left: 20px;
+  
+
+    }
+
+    #wave{
+        font-size: 50px;
+        animation: wave 2.5s 0.6s infinite;
+        transform-origin: 75% 75%;
+    }
+
+    @keyframes wave {
+        0% { transform: rotate (0deg)}
+        10% {transform: rotate (16deg) }
+        20% {transform: rotate (-6deg) }
+        30% {transform: rotate (16deg) }
+        40% {transform: rotate (-4deg) }
+        50% {transform: rotate (16deg) }
+        60% {transform: rotate (0deg) }
+        100% {transform: rotate (0deg) }
+    }
+
+
+header{
+    display: block;
+    margin: 10px 50px 10px 50px;
+    padding: 20px;
+   
+}
+
+
+.navbar{
+    float: right;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+   
+}
+a{
+    position: relative;
+    bottom: 100px;
+    font-size: larger;
+    color: #fff;
+    font-family:sans-serif;
+    padding: 5px;
+    font-weight: 200px;  
+}
+
+li:hover{
+   text-decoration: underline;
+   transition: 2s;
+   padding-bottom: 10px;
+
+}
+
+.Sign{
+    padding: 5px;
+    font-weight: 200px;
+    font-size: 15px;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 200px;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.Sign:hover{
+    background-color: burlywood;
+    transition-duration: 500ms;
+    text-decoration: none;
+     border-radius: 30px;
+    border-style: dotted;
+   
+}
+
+.sidebar{
+  
+    top: inherit;
+    z-index: 999;
+    background-color: rgb(11, 10, 10);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+     align-items: flex-start;
+    justify-content: flex-start;
+    float: right;
+}
+
+.sidebar li {
+   width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+#menu{
+    font-size: small;
+    background-color: blue;
+}
+
+#authForm {
+    background-color: rgb(203, 203, 227);
+    display: flex;
+    padding: 15px;
+    position: relative;
+    top: 200px;
+}
+
+#userEmail, #userPassword{
+    border-radius: 5px;
+    border-style: groove;
+    border-width: 3px;
+      padding: 5px;
+}
+
+#signUpButton,#logInButton,#logOutButton{
+    border-radius: 5px;
+    border-style: groove;
+    padding: 8px;
+    font-style: italic;
+    font-weight: bold;
+    background-color:lightgreen ;
+   
+}
+
+h3{
+    padding: 10px;
+   
+}
+
+input::placeholder{
+    color: lightseagreen;
+    opacity: 0.8;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+
+/* header */
+
+#title{
+  
+    text-align: center;
+    margin: 40px;
+}
+
+
+/* boby */
+
+.contents{
+    margin: 0px 270px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-flow: row wrap;
+        
+}
+
+#card{
+    height: 180px;
+    width: 180px;
+    border-radius: 30px;
+    margin: 10px;
+   
+   
+    
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    
+  
+}
+
+button{
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+   
+}
+
+#Github{
+    padding-right: 30px;
+    text-align: center;
+    
+}
+
+.project-one{
+    
+    border-style: groove;
+    border-radius: 20px;
+    padding: 15px;
+    
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+ form {
+     border-radius: 5px;
+    border-style: dashed;
+    padding: 30px;
+    background-image: url(Photos/panther.JPEG);
+    color: #fff;
+ }
+ 
+ form input {
+    margin: 3px;
+    padding: 8px;
+    border-style: dotted;
+ 
+ 
+    ;
+   
+}

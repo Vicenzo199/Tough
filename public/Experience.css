@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+
+body{
+     background-color: black; 
+    color: #fff;
+}
+/* head */
+
+.top-head{
+    text-align: center;
+    margin: 80px;
+    font-family: sans-serif;
+    line-height: 50px;
+}
+
+/* fronend */
+
+
+.sub-header{
+    display: block;
+    justify-content: center;
+    margin-bottom: 5px;
+   
+}
+
+#header1{
+    line-height: 30px;
+     border-radius: 50px;
+    border-style: solid;
+    text-align: center;
+     width: 450px ;
+     height: 280px;
+     padding: 30px;
+    
+    
+    
+}
+
+#front{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0px 60px;
+    text-align: left;
+   
+   
+}
+
+/* backend */
+#header2{
+    line-height: 30px;
+    border-radius: 50px;
+    border-style: solid;
+    text-align: center;
+    width: 450px ;
+    height: 280px;
+    padding: 30px;
+   
+
+}
+
+#Back{
+   display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0px 60px;
+    text-align: left;
+   
+}
+
+li{
+    list-style-image: url(Photos/white checkmark.png);
+
+ 
+}
+.contents{
+   display: flex;
+   justify-content: center;
+   flex-flow: row wrap;
+   margin: 40px;
+   justify-content:space-evenly;
+   margin: 80px 100px;
+}
+

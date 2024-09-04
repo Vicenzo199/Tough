@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign UP Form</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: lightskyblue;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- authForm -->
+
+    <div id="authForm">
+      <h3><b>Sign up or Log in</b></h3>
+      <input type="email" placeholder="email" id="userEmail" />
+      <input type="password" placeholder="password" id="userPassword" /> <br />
+      <br />
+      <button id="signUpButton">Sign Up</button>
+      <button id="logInButton">Log in</button>
+    </div>
+
+    <!-- secretDocument -->
+
+    <div id="secretForm">
+      <!-- <h1>
+        <b> Welcome to our Homepage </b>
+        <br />
+        <br />
+      </h1> -->
+
+      <button id="logOutButton">Log out</button>
+    </div>
+    <!-- 
+    CONNECTING FIREBASE TO WEBPAGE -->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBSFxVlhiOrF7XTRvSSJLXuVDjd5Tw-Sc",
+        authDomain: "signing-up-35330.firebaseapp.com",
+        projectId: "signing-up-35330",
+        storageBucket: "signing-up-35330.appspot.com",
+        messagingSenderId: "1025776898067",
+        appId: "1:1025776898067:web:d1fb9f3426ccb2d5872fe6",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const authForm = document.querySelector("#authForm");
+      const userEmail = document.querySelector("#userEmail");
+      const userPassword = document.querySelector("#userPassword");
+      const SecretDocument = document.querySelector("#secretForm");
+      const signUpButton = document.querySelector("#signUpButton");
+      const logInButton = document.querySelector("#logInButton"); //(sign in)
+      const logOutButton = document.querySelector("#logOutButton"); //(sign out)
+
+      // Hiding a secret document
+
+      secretForm.style.display = "none";
+
+      // creating a new user account
+
+      const userSignUp = async () => {
+        const signUpEmail = userEmail.value;
+        const signUpPassword = userPassword.value;
+        createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+
+            console.log(user);
+            alert("Your account has been created successfully.");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log(errorCode + errorMessage);
+          });
+      };
+      signUpButton.addEventListener("click", userSignUp); //activating signup button
+
+      const userSignIn = async () => {
+        const signInEmail = userEmail.value;
+        const signInPassword = userPassword.value;
+        signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            alert(" Congrats,You have logged in  successfully!!!");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log(errorCode + errorMessage);
+          });
+      };
+      logInButton.addEventListener("click", userSignIn); //activating sign in button
+
+      // checking authentication state
+
+      const checkAuthState = async () => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            authForm.style.display = "none";
+            secretForm.style.display = "block";
+          } else {
+            authForm.style.display = "block";
+            secretForm.style.display = "none";
+          }
+        });
+      };
+      checkAuthState();
+
+      // sign out function
+
+      const userLogOut = async () => {
+        await signOut(auth);
+      };
+
+      logOutButton.addEventListener("click", userLogOut); //activating sign out button
+    </script>
+  </body>
+</html>
